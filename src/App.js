@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './todoList'
 import {v4 as uuidv4} from 'uuid'
-
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 function App() {
   const [todos, setTodos] = useState([])
@@ -39,11 +38,6 @@ function App() {
       <button onClick={handleClearTodos}>Clear Complete</button>
       <div>{todos.filter(todo => !todo.complete).length} left to do</div>
     </>
-
-    
   )
 }
-
-
-
 export default App;
